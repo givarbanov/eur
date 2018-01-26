@@ -1,0 +1,17 @@
+@keyframes openSubMenu {
+    0% {
+        transform: translateY(0);
+    }
+
+    20% {
+        transform: translateY(-0.3rem);
+    }
+
+    50% {
+        transform: translateY(0.3rem);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}

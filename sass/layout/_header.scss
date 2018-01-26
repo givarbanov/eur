@@ -1,0 +1,22 @@
+.header {
+    // height: 95vh;
+    // background-image: linear-gradient(to bottom right, rgba($color-bg-dark, .7), rgba($color-bg-dark, .7)),
+    //     url("../img/library.jpg");
+    // background-size: cover;
+    // background-position: top; 
+
+    
+
+    &__svg {
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+
+    &__image {
+        height: 100%;
+        width: 100%;
+    }
+}

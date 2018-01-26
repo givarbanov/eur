@@ -1,0 +1,96 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; }
+
+html {
+  font-size: 62.5%; }
+
+body {
+  box-sizing: border-box;
+  padding: 3rem; }
+
+.container {
+  max-width: 144rem;
+  margin: 3rem auto; }
+
+.header__svg {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0; }
+
+.header__image {
+  height: 100%;
+  width: 100%; }
+
+.navigation {
+  font-size: 1.4rem;
+  font-weight: 400; }
+  .navigation__nav {
+    position: relative; }
+  .navigation__list {
+    list-style: none;
+    position: absolute;
+    top: 2rem;
+    right: 2rem; }
+  .navigation__item {
+    display: inline-block;
+    position: relative; }
+  .navigation__sublist {
+    font-size: 1.2rem;
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    height: 0;
+    width: 140%;
+    padding-left: 1.2rem;
+    overflow: hidden;
+    list-style: none;
+    display: inline-block;
+    z-index: 8;
+    background-color: transparent;
+    transform: translateX(-50%);
+    transition: all .2s; }
+  .navigation__subitem:first-child {
+    margin-top: 2.4rem; }
+  .navigation__sublink:link, .navigation__sublink:visited {
+    color: #171c54;
+    text-decoration: none;
+    text-transform: uppercase;
+    display: block;
+    padding: .3rem 1rem;
+    transition: all .2s; }
+  .navigation__sublink:hover {
+    transform: translateX(2rem); }
+  .navigation__link:link, .navigation__link:visited {
+    color: #b3b7ea;
+    text-decoration: none;
+    text-transform: uppercase;
+    display: inline-block;
+    padding: 1.5rem 5rem;
+    background-color: transparent;
+    position: relative;
+    z-index: 10;
+    transition: all .2s; }
+  .navigation__item:hover > .navigation__link {
+    color: #171c54;
+    background-color: #b3b7ea;
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.4);
+    transform: translateY(0.6rem);
+    transition: all .2s ease-in; }
+  .navigation__item:hover > .navigation__sublist {
+    color: #171c54;
+    height: 12rem;
+    background-color: #cdd0f1;
+    transition: all .3s ease-out; }
+
+.scholarship {
+  height: 95vh;
+  background-image: linear-gradient(to bottom right, rgba(1, 1, 1, 0.3), rgba(1, 1, 1, 0.3)), url("../img/books-table.jpg");
+  background-size: cover;
+  background-position: top;
+  margin-top: 10rem; }
