@@ -9,12 +9,7 @@ html {
   font-size: 62.5%; }
 
 body {
-  box-sizing: border-box;
-  padding: 3rem; }
-
-.container {
-  max-width: 144rem;
-  margin: 3rem auto; }
+  box-sizing: border-box; }
 
 .header__svg {
   height: 100%;
@@ -29,7 +24,7 @@ body {
 
 .navigation {
   font-size: 1.4rem;
-  font-weight: 400; }
+  font-weight: 700; }
   .navigation__nav {
     position: relative; }
   .navigation__list {
@@ -67,7 +62,7 @@ body {
   .navigation__sublink:hover {
     transform: translateX(2rem); }
   .navigation__link:link, .navigation__link:visited {
-    color: #b3b7ea;
+    color: #090907;
     text-decoration: none;
     text-transform: uppercase;
     display: inline-block;
@@ -85,8 +80,76 @@ body {
   .navigation__item:hover > .navigation__sublist {
     color: #171c54;
     height: 12rem;
-    background-color: #cdd0f1;
+    background-color: rgba(205, 208, 241, 0.705);
     transition: all .3s ease-out; }
+
+.nav {
+  color: #fff;
+  height: 100vh;
+  padding: 5rem 3rem;
+  background-image: url("../img/study-book.jpg");
+  background-size: cover;
+  display: -ms-flexbox;
+  -ms-flex-wrap: wrap;
+  display: flex;
+  flex-wrap: wrap; }
+  .nav__item {
+    margin: 1rem;
+    padding: 3rem;
+    width: 30%;
+    background-color: rgba(0, 150, 135, 0.2);
+    box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.6);
+    transition: all .2s;
+    border-radius: 3px;
+    position: relative;
+    display: -ms-flexbox;
+    -ms-flex-direction: column;
+    -ms-flex-pack: justify;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around; }
+  .nav__item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.6); }
+  .nav__heading {
+    font-size: 3rem;
+    font-weight: 700;
+    -ms-flex-item-align: center;
+    align-self: center; }
+  .nav__text {
+    font-size: 1.7rem;
+    font-weight: 300; }
+  .nav__links {
+    font-size: 1.7rem;
+    font-weight: 400;
+    padding: 2rem;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    opacity: 0;
+    height: 0;
+    width: 100%;
+    background-color: #009687;
+    display: -ms-flexbox;
+    -ms-flex-direction: column;
+    -ms-flex-pack: center;
+    -ms-flex-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transition: all .4s; }
+  .nav__item:hover .nav__links {
+    opacity: 1;
+    height: 55%; }
+  .nav__link {
+    padding: 0.5rem;
+    cursor: pointer;
+    transition: all .2s;
+    -ms-align-self: center;
+    align-self: center; }
+    .nav__link:hover {
+      transform: scale(1.2) skewY(3deg);
+      box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.4); }
 
 .scholarship {
   height: 95vh;

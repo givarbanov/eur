@@ -1,0 +1,96 @@
+.nav {
+
+    color: $color-white;
+    height: 100vh;
+    padding: 5rem 3rem;
+    background-image: url("../img/study-book.jpg");
+    background-size: cover;
+
+    display: -ms-flexbox;
+    // -ms-flex-align: center;
+    -ms-flex-wrap: wrap;
+
+    display: flex;
+    // justify-content: center;
+    flex-wrap: wrap;
+
+    &__item {
+        margin: 1rem;
+        padding: 3rem;
+        width: 30%;
+        background-color: rgba($color-green-dark, 0.2);
+        box-shadow: 0 1.5rem 4rem rgba($color-black, .6);
+        transition: all .2s;
+        border-radius: 3px;
+        position: relative;
+
+        display: -ms-flexbox;
+        -ms-flex-direction: column;
+        -ms-flex-pack: justify;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+
+    &__item:hover {
+        transform: scale(1.05);
+        box-shadow: 0 3rem 5rem rgba($color-black, .6);
+    }
+
+    &__heading {
+        font-size: 3rem;
+        font-weight: 700;
+
+        -ms-flex-item-align: center;
+        align-self: center;
+    }
+
+    &__text {
+        font-size: 1.7rem;
+        font-weight: 300;
+    }
+
+    &__links {
+        font-size: 1.7rem;
+        font-weight: 400;
+        padding: 2rem;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        opacity: 0;
+        height: 0;
+        width: 100%;
+        background-color: $color-green-dark;
+
+        display: -ms-flexbox;
+        -ms-flex-direction: column;
+        -ms-flex-pack: center;
+        -ms-flex-align: center;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        transition: all .4s;
+    }
+
+    &__item:hover &__links {
+        opacity: 1;
+        height: 55%;
+    }
+
+    &__link {
+        padding: 0.5rem;
+        cursor: pointer;
+        transition: all .2s;
+
+        -ms-align-self: center;
+        align-self: center;
+
+        &:hover {
+            transform: scale(1.2) skewY(3deg);
+            box-shadow: 0 1.5rem 4rem rgba($color-black, .4);
+        }
+    }
+}
