@@ -9,7 +9,34 @@ html {
   font-size: 62.5%; }
 
 body {
+  font-family: "Indie Flower", cursive;
+  font-weight: 400;
+  line-height: 1.7;
   box-sizing: border-box; }
+
+@keyframes openSubMenu {
+  0% {
+    transform: translateY(0); }
+  20% {
+    transform: translateY(-0.3rem); }
+  50% {
+    transform: translateY(0.3rem); }
+  100% {
+    transform: translateY(0); } }
+
+@keyframes bottomToTop {
+  0% {
+    opacity: 0;
+    transform: translateY(5rem); }
+  100% {
+    opacity: 1;
+    transform: translateY(0); } }
+
+@keyframes drawLineLeftToRight {
+  0% {
+    width: 0; }
+  100% {
+    width: 80%; } }
 
 .header__svg {
   height: 100%;
@@ -84,11 +111,14 @@ body {
     transition: all .3s ease-out; }
 
 .nav {
+  font-size: 1.7rem;
+  font-weight: 400;
   color: #fff;
   height: 100vh;
   padding: 5rem 3rem;
   background-image: url("../img/study-book.jpg");
   background-size: cover;
+  overflow: hidden;
   display: -ms-flexbox;
   -ms-flex-wrap: wrap;
   display: flex;
@@ -99,9 +129,11 @@ body {
     width: 30%;
     background-color: rgba(0, 150, 135, 0.2);
     box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.6);
-    transition: all .2s;
     border-radius: 3px;
     position: relative;
+    backface-visibility: hidden;
+    transition: all .2s;
+    animation: bottomToTop .3s;
     display: -ms-flexbox;
     -ms-flex-direction: column;
     -ms-flex-pack: justify;
@@ -114,14 +146,21 @@ body {
   .nav__heading {
     font-size: 3rem;
     font-weight: 700;
-    -ms-flex-item-align: center;
-    align-self: center; }
+    text-transform: uppercase;
+    width: 100%;
+    text-align: center;
+    position: relative; }
+    .nav__heading::after {
+      content: "";
+      display: block;
+      height: 1px;
+      background-color: rgba(255, 255, 255, 0.3);
+      margin: 0 10%;
+      animation: drawLineLeftToRight 2s; }
   .nav__text {
     font-size: 1.7rem;
     font-weight: 300; }
   .nav__links {
-    font-size: 1.7rem;
-    font-weight: 400;
     padding: 2rem;
     position: absolute;
     bottom: 0;
@@ -142,14 +181,25 @@ body {
     opacity: 1;
     height: 55%; }
   .nav__link {
-    padding: 0.5rem;
-    cursor: pointer;
-    transition: all .2s;
+    font-size: 1.3rem;
+    font-weight: 300;
+    color: inherit;
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 0.5rem 2rem;
+    display: block;
     -ms-align-self: center;
     align-self: center; }
-    .nav__link:hover {
-      transform: scale(1.2) skewY(3deg);
-      box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.4); }
+    .nav__link::before, .nav__link::after {
+      content: "";
+      height: 2px;
+      width: 0;
+      display: inline-block;
+      margin: 0 .8rem .3rem .8rem;
+      background-color: rgba(255, 255, 255, 0.3);
+      transition: all .4s; }
+    .nav__link:hover::before, .nav__link:hover::after {
+      width: 3rem; }
 
 .scholarship {
   height: 95vh;
