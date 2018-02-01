@@ -5,23 +5,25 @@
     color: $color-white;
     height: 100vh;
     padding: 5rem 3rem;
-    background-image: url("../img/study-book.jpg");
+    // background-image: url("../img/study-book.jpg");
+    background-image: url("../img/colour-art-pencils.jpg");
     background-size: cover;
     overflow: hidden;
 
     display: -ms-flexbox;
-    // -ms-flex-align: center;
+    -ms-flex-pack: justify;
+    // -ms-flex-align: space-around;
     -ms-flex-wrap: wrap;
 
     display: flex;
-    // justify-content: center;
+    justify-content: space-around;
     flex-wrap: wrap;
 
     &__item {
-        margin: 1rem;
+        margin: 1rem 0;
         padding: 3rem;
-        width: 30%;
-        background-color: rgba($color-green-dark, 0.2);
+        width: 32%;
+        background-color: rgba($color-main-dark, 0.4);
         box-shadow: 0 1.5rem 4rem rgba($color-black, .6);
         border-radius: 3px;
         position: relative;
@@ -78,7 +80,8 @@
         opacity: 0;
         height: 0;
         width: 100%;
-        background-color: $color-green-dark;
+        background-color: $color-main-dark;
+        border-radius: 0 0 3px 3px;
 
         display: -ms-flexbox;
         -ms-flex-direction: column;
