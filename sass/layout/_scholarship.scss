@@ -1,0 +1,52 @@
+.scholarship {
+
+    height: 100vh;
+    padding: 5rem 15rem 15rem;
+    background-image: linear-gradient(to right bottom, #f2fcfe, #6190e8);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+
+    &__heading-primary {
+        font-size: 3rem;
+    }
+
+    &__content {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    &__img {
+
+        height: 60vh;
+        width: 50%;
+        background-image: //linear-gradient(to right, rgba($color-white, 0) 20%, rgba($color-white, 1)),
+            url("../img/library.jpg");
+        background-size: cover;
+        background-position: top;
+        box-shadow: -1rem 1.5rem 3rem rgba($color-black, 0.4);
+
+        // filter: blur(3px);
+        transform: perspective(100rem) rotateY(40deg);
+        transition: all .4s;
+
+        &:hover {
+            transform: rotateY(0);
+            // filter: blur(0);
+        }
+    }
+
+    &__text {
+        font-size: 1.7rem;
+        width: 55%;
+
+    }
+}
+
+.anim {
+    animation: bottomToTopScroll .3s;
+}

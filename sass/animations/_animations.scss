@@ -19,7 +19,19 @@
 @keyframes bottomToTop {
     0% {
         opacity: 0;
-        transform: translateY(5rem);
+        transform: translateY(15rem);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes bottomToTopScroll {
+    0% {
+        opacity: 0;
+        transform: translateY(50rem);
     }
 
     100% {
@@ -35,5 +47,17 @@
 
     100% {
         width: 80%; // because of 10% margin-left and margin-right
+    }
+}
+
+@keyframes gradient {
+    0% {
+        background-image: linear-gradient(to right, rgba($color-white, 0) 20%, rgba($color-white, 1)),
+        url("../img/library.jpg");
+    }
+
+    100% {
+        background-image: linear-gradient(to right, rgba($color-white, 0) 100%, rgba($color-white, 1)),
+        url("../img/library.jpg");
     }
 }
