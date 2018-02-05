@@ -32,18 +32,18 @@ body {
 @keyframes bottomToTop {
   0% {
     opacity: 0;
-    transform: translateY(15rem); }
+    transform: translateY(25rem); }
   100% {
     opacity: 1;
     transform: translateY(0); } }
 
-@keyframes bottomToTopScroll {
+@keyframes bottomToTopImg {
   0% {
     opacity: 0;
-    transform: translateY(50rem); }
+    transform: perspective(100rem) rotateY(0) translateY(25rem); }
   100% {
     opacity: 1;
-    transform: translateY(0); } }
+    transform: perspective(100rem) rotateY(40deg) translateY(0); } }
 
 @keyframes drawLineLeftToRight {
   0% {
@@ -76,13 +76,13 @@ body {
     margin: 1rem 0;
     padding: 3rem;
     width: 32%;
-    background-color: rgba(2, 119, 189, 0.4);
+    background-color: rgba(2, 119, 189, 0.6);
     box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.6);
     border-radius: 3px;
     position: relative;
     backface-visibility: hidden;
     transition: all .2s;
-    animation: bottomToTop .3s;
+    animation: bottomToTop .7s;
     display: -ms-flexbox;
     -ms-flex-direction: column;
     -ms-flex-pack: justify;
@@ -153,33 +153,53 @@ body {
 
 .scholarship {
   height: 100vh;
-  padding: 5rem 15rem 15rem;
+  padding: 0 15rem 5rem;
   background-image: linear-gradient(to right bottom, #f2fcfe, #6190e8);
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center; }
   .scholarship__heading-primary {
-    font-size: 3rem; }
+    font-size: 4rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    width: 30%;
+    text-align: center; }
+    .scholarship__heading-primary::after {
+      content: "";
+      display: block;
+      height: 1px;
+      background-color: rgba(0, 0, 0, 0.3);
+      margin-top: -1.2rem; }
   .scholarship__content {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    align-items: center; }
+    align-items: center;
+    margin-bottom: 7rem; }
   .scholarship__img {
-    height: 60vh;
-    width: 50%;
-    background-image: url("../img/library.jpg");
+    height: 45vh;
+    width: 45%;
+    background-image: url("../img/study-book.jpg");
     background-size: cover;
     background-position: top;
     box-shadow: -1rem 1.5rem 3rem rgba(0, 0, 0, 0.4);
+    outline: 1rem solid #6190e8;
+    outline-offset: 2rem;
     transform: perspective(100rem) rotateY(40deg);
-    transition: all .4s; }
+    transition: all .7s; }
     .scholarship__img:hover {
       transform: rotateY(0); }
   .scholarship__text {
-    font-size: 1.7rem;
+    font-size: 2rem;
+    padding-left: 5rem;
     width: 55%; }
 
+.invis {
+  opacity: 0; }
+
 .anim {
-  animation: bottomToTopScroll .3s; }
+  animation: bottomToTop .8s; }
+
+.animimg {
+  animation: bottomToTopImg .8s; }

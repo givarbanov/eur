@@ -1,16 +1,28 @@
 .scholarship {
 
     height: 100vh;
-    padding: 5rem 15rem 15rem;
+    padding: 0 15rem 5rem;
     background-image: linear-gradient(to right bottom, #f2fcfe, #6190e8);
 
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
 
     &__heading-primary {
-        font-size: 3rem;
+        font-size: 4rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        width: 30%;
+        text-align: center;
+
+        &::after {
+            content: "";
+            display: block;
+            height: 1px;
+            background-color: rgba($color-black, .3);
+            margin-top: -1.2rem;
+        }
     }
 
     &__content {
@@ -18,21 +30,25 @@
         flex-direction: row;
         justify-content: space-around;
         align-items: center;
+        margin-bottom: 7rem;
     }
 
     &__img {
 
-        height: 60vh;
-        width: 50%;
+        height: 45vh;
+        width: 45%;
         background-image: //linear-gradient(to right, rgba($color-white, 0) 20%, rgba($color-white, 1)),
-            url("../img/library.jpg");
+            url("../img/study-book.jpg");
         background-size: cover;
         background-position: top;
         box-shadow: -1rem 1.5rem 3rem rgba($color-black, 0.4);
 
+        outline: 1rem solid #6190e8;
+        outline-offset: 2rem;
+
         // filter: blur(3px);
         transform: perspective(100rem) rotateY(40deg);
-        transition: all .4s;
+        transition: all .7s;
 
         &:hover {
             transform: rotateY(0);
@@ -41,12 +57,21 @@
     }
 
     &__text {
-        font-size: 1.7rem;
+        font-size: 2rem; 
+        padding-left: 5rem;
         width: 55%;
 
     }
 }
 
+.invis {
+    opacity: 0;
+}
+
 .anim {
-    animation: bottomToTopScroll .3s;
+    animation: bottomToTop .8s;
+}
+
+.animimg {
+    animation: bottomToTopImg .8s;
 }

@@ -19,7 +19,7 @@
 @keyframes bottomToTop {
     0% {
         opacity: 0;
-        transform: translateY(15rem);
+        transform: translateY(25rem);
     }
 
     100% {
@@ -28,15 +28,15 @@
     }
 }
 
-@keyframes bottomToTopScroll {
+@keyframes bottomToTopImg {
     0% {
         opacity: 0;
-        transform: translateY(50rem);
+        transform: perspective(100rem) rotateY(0) translateY(25rem);
     }
 
     100% {
         opacity: 1;
-        transform: translateY(0);
+        transform: perspective(100rem) rotateY(40deg) translateY(0);
     }
 }
 
