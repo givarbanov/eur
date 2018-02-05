@@ -1,0 +1,31 @@
+@mixin underlineHeading($bgcolor) {
+    content: "";
+    display: block;
+    height: 1px;
+    background-color: rgba($bgcolor, .3);
+}
+
+@mixin heading($font-size, $width) {
+    font-size: $font-size;
+    font-weight: 700;
+    text-transform: uppercase;
+    width: $width;
+    line-height: 1.2;
+    text-align: center;
+
+    -ms-flex-item-align: center;
+    align-self: center;
+}
+
+@mixin sections {
+    height: 100vh;
+    padding: 0 15rem 5rem;
+
+    display: -ms-flexbox;
+    -ms-flex-direction: column;
+    -ms-flex-pack: distribute;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}

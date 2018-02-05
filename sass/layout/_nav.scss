@@ -13,7 +13,6 @@
 
     display: -ms-flexbox;
     -ms-flex-pack: justify;
-    // -ms-flex-align: space-around;
     -ms-flex-wrap: wrap;
 
     display: flex;
@@ -38,7 +37,8 @@
 
         display: flex;
         flex-direction: column;
-        justify-content: space-around;
+        justify-content: space-evenly;
+        
     }
 
     &__item:hover {
@@ -47,23 +47,10 @@
     }
 
     &__heading {
-        font-size: 3rem;
-        font-weight: 700;
-        text-transform: uppercase;
-        width: 100%;
-        text-align: center;
-        position: relative;
-
-        // -ms-flex-item-align: center;
-        // align-self: center;
+        @include heading(3rem, 60%);
 
         &::after {
-            content: "";
-            display: block;
-            height: 1px;
-            background-color: rgba($color-white, .3);
-            margin: 0 10%;
-
+            @include underlineHeading($color-white);
             animation: drawLineLeftToRight 2s;
         }
     }
@@ -71,6 +58,8 @@
     &__text {
         font-size: 1.7rem;
         font-weight: 300;
+
+        
     }
 
     &__links {
@@ -83,6 +72,7 @@
         width: 100%;
         background-color: $color-main-dark;
         border-radius: 0 0 3px 3px;
+        cursor: pointer;
 
         display: -ms-flexbox;
         -ms-flex-direction: column;
@@ -109,7 +99,6 @@
         text-transform: uppercase;
         padding: 0.5rem 2rem;
         display: block;
-        // transition: all .4s;
 
         -ms-align-self: center;
         align-self: center;
@@ -125,8 +114,6 @@
         }
  
         &:hover {
-            // transform: scale(1.2) skewY(3deg);
-            // box-shadow: 0 1.5rem 4rem rgba($color-black, .4);
 
             &::before, &::after {
                 width: 3rem;

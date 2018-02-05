@@ -1,36 +1,24 @@
 .scholarship {
 
-    height: 100vh;
-    padding: 0 15rem 5rem;
+    @include sections;
     background-image: linear-gradient(to right bottom, #f2fcfe, #6190e8);
 
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-
     &__heading-primary {
-        font-size: 4rem;
-        font-weight: 700;
-        text-transform: uppercase;
-        width: 30%;
-        text-align: center;
+        @include heading(4rem, 30%);
 
         &::after {
-            content: "";
-            display: block;
-            height: 1px;
-            background-color: rgba($color-black, .3);
-            margin-top: -1.2rem;
+            @include underlineHeading($color-black);
         }
     }
 
     &__content {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-around;
-        align-items: center;
         margin-bottom: 7rem;
+
+        display: -ms-flexbox;
+        -ms-flex-align: center;
+
+        display: flex;
+        align-items: center;
     }
 
     &__img {
@@ -46,13 +34,11 @@
         outline: 1rem solid #6190e8;
         outline-offset: 2rem;
 
-        // filter: blur(3px);
         transform: perspective(100rem) rotateY(40deg);
         transition: all .7s;
 
         &:hover {
             transform: rotateY(0);
-            // filter: blur(0);
         }
     }
 
@@ -60,7 +46,6 @@
         font-size: 2rem; 
         padding-left: 5rem;
         width: 55%;
-
     }
 }
 
@@ -70,8 +55,13 @@
 
 .anim {
     animation: bottomToTop .8s;
+
+    // for heading only
+    &::after {
+        animation: drawLineLeftToRight 3s, .4s;
+    }
 }
 
-.animimg {
+.anim-img {
     animation: bottomToTopImg .8s;
 }
