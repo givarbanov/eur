@@ -26,3 +26,8 @@ body {
     box-sizing: border-box;
 
 }
+
+.main {
+    background-color: $color-bg;
+    // background-image: linear-gradient(to bottom, $color-main-lightest, $color-main-darkest);
+}

@@ -19,6 +19,9 @@ body {
   line-height: 1.7;
   box-sizing: border-box; }
 
+.main {
+  background-color: #E3E4EA; }
+
 @keyframes bottomToTop {
   0% {
     opacity: 0;
@@ -44,10 +47,10 @@ body {
 .nav {
   font-size: 1.7rem;
   font-weight: 400;
-  color: #fff;
+  color: #F2F2F2;
   height: 100vh;
   padding: 5rem 3rem;
-  background-image: url("../img/business.jpg");
+  background-image: linear-gradient(to bottom, rgba(227, 228, 234, 0.2), #e3e4ea), url("../img/img10.jpg");
   background-size: cover;
   overflow: hidden;
   display: -ms-flexbox;
@@ -60,7 +63,7 @@ body {
     margin: 1rem 0;
     padding: 3rem;
     width: 32%;
-    background-color: rgba(2, 119, 189, 0.6);
+    background-color: rgba(63, 68, 127, 0.7);
     box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.6);
     border-radius: 3px;
     position: relative;
@@ -75,7 +78,7 @@ body {
     justify-content: space-evenly; }
   .nav__item:hover {
     transform: scale(1.05);
-    box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.6); }
+    box-shadow: 0 2rem 4rem rgba(0, 0, 0, 0.6); }
   .nav__heading {
     font-size: 3rem;
     font-weight: 700;
@@ -102,7 +105,7 @@ body {
     opacity: 0;
     height: 0;
     width: 100%;
-    background-color: #0277bd;
+    background-color: #3F447F;
     border-radius: 0 0 3px 3px;
     cursor: pointer;
     display: -ms-flexbox;
@@ -145,8 +148,7 @@ body {
   -ms-flex-pack: distribute;
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
-  background-image: linear-gradient(to right bottom, #f2fcfe, #6190e8); }
+  justify-content: space-around; }
   .scholarship__heading-primary {
     font-size: 4rem;
     font-weight: 700;
@@ -170,11 +172,11 @@ body {
   .scholarship__img {
     height: 45vh;
     width: 45%;
-    background-image: url("../img/study-book.jpg");
+    background-image: url("../img/img21.jpg");
     background-size: cover;
     background-position: top;
     box-shadow: -1rem 1.5rem 3rem rgba(0, 0, 0, 0.4);
-    outline: 1rem solid #6190e8;
+    outline: 1rem solid #171C54;
     outline-offset: 2rem;
     transform: perspective(100rem) rotateY(40deg);
     transition: all .7s; }
@@ -198,4 +200,40 @@ body {
 
 .IBAandRSM {
   height: 100vh;
-  background-color: bisque; }
+  padding: 0 15rem 5rem;
+  display: -ms-flexbox;
+  -ms-flex-direction: column;
+  -ms-flex-pack: distribute;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around; }
+  .IBAandRSM__heading-primary {
+    font-size: 4rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    width: 30%;
+    line-height: 1.2;
+    text-align: center;
+    -ms-flex-item-align: center;
+    align-self: center; }
+    .IBAandRSM__heading-primary::after {
+      content: "";
+      display: block;
+      height: 1px;
+      background-color: rgba(0, 0, 0, 0.3); }
+  .IBAandRSM__item {
+    background-color: #AABBDD;
+    box-shadow: 0 2rem 4rem rgba(0, 0, 0, 0.4);
+    display: flex;
+    justify-content: space-around;
+    align-items: center; }
+  .IBAandRSM__img {
+    width: 30%;
+    padding: 3rem;
+    filter: blur(3px);
+    transition: .2s; }
+    .IBAandRSM__img:hover {
+      filter: blur(0); }
+  .IBAandRSM__text {
+    font-size: 2rem;
+    color: #2B2B2B; }

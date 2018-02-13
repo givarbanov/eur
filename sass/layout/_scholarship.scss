@@ -1,7 +1,7 @@
 .scholarship {
 
     @include sections;
-    background-image: linear-gradient(to right bottom, #f2fcfe, #6190e8);
+    // background-image: linear-gradient(to right top, $color-main-lightest, $color-main-darkest);
 
     &__heading-primary {
         @include heading(4rem, 30%);
@@ -26,12 +26,12 @@
         height: 45vh;
         width: 45%;
         background-image: //linear-gradient(to right, rgba($color-white, 0) 20%, rgba($color-white, 1)),
-            url("../img/study-book.jpg");
+            url("../img/img21.jpg");
         background-size: cover;
         background-position: top;
         box-shadow: -1rem 1.5rem 3rem rgba($color-black, 0.4);
 
-        outline: 1rem solid #6190e8;
+        outline: 1rem solid $color-main-dark;
         outline-offset: 2rem;
 
         transform: perspective(100rem) rotateY(40deg);

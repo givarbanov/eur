@@ -1,8 +1,48 @@
 .IBAandRSM {
 
-    height: 100vh;
+    @include sections;
+    // background-color: $color-main-lightest;
 
-    // @include sections;
+    &__heading-primary {
+        @include heading(4rem, 30%);
 
-    background-color: bisque;
+        &::after {
+            @include underlineHeading($color-black);
+        }
+    }
+
+    // &__content {
+    //     display: flex;
+    //     flex-direction: column;
+    //     justify-content: space-around;
+
+        
+    // }
+
+    &__item {
+        background-color:$color-main-light;
+        box-shadow: 0 2rem 4rem rgba($color-black, .4);
+
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    &__img {
+        width: 30%;
+        padding: 3rem;
+
+        filter: blur(3px);
+       
+        transition: .2s;
+
+        &:hover {
+            filter: blur(0);
+        }
+    }
+
+    &__text {
+        font-size: 2rem; 
+        color: $color-grey-dark;
+    }
 }

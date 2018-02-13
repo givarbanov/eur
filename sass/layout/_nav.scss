@@ -2,12 +2,13 @@
 
     font-size: 1.7rem;
     font-weight: 400;
-    color: $color-white;
+    color: $color-grey-light;
     height: 100vh;
     padding: 5rem 3rem;
     // background-image: url("../img/study-book.jpg");
     // background-image: url("../img/colour-art-pencils.jpg");
-    background-image: url("../img/business.jpg");
+    background-image: linear-gradient(to bottom, rgba($color-bg, .2), rgba($color-bg, 1s)),
+                       url("../img/img10.jpg");
     background-size: cover;
     overflow: hidden;
 
@@ -23,7 +24,7 @@
         margin: 1rem 0;
         padding: 3rem;
         width: 32%;
-        background-color: rgba($color-main-dark, 0.6);
+        background-color: rgba($color-main, 0.7);
         box-shadow: 0 1.5rem 4rem rgba($color-black, .6);
         border-radius: 3px;
         position: relative;
@@ -43,7 +44,7 @@
 
     &__item:hover {
         transform: scale(1.05);
-        box-shadow: 0 3rem 5rem rgba($color-black, .6);
+        box-shadow: 0 2rem 4rem rgba($color-black, .6);
     }
 
     &__heading {
@@ -70,7 +71,7 @@
         opacity: 0;
         height: 0;
         width: 100%;
-        background-color: $color-main-dark;
+        background-color: $color-main;
         border-radius: 0 0 3px 3px;
         cursor: pointer;
 

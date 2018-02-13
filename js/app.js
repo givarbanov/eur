@@ -3,8 +3,8 @@
     function isInViewport(element) {
         var rect = element.getBoundingClientRect();
         return (
-            rect.top > 0 &&
-            rect.top + 150 < window.innerHeight 
+            (rect.top > 0 && rect.top + 150 < window.innerHeight) ||
+            (rect.bottom > 0 && rect.bottom < window.innerHeight)
         );
     }
 
